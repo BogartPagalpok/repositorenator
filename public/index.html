@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Builder - GitHub Repository Generator</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/xterm/4.4.0/xterm.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>GitHub Repository Builder</h1>
+            <nav>
+                <button id="login-btn">Login with GitHub</button>
+                <button id="template-btn">Create Template</button>
+            </nav>
+        </header>
+        <main>
+            <section id="config-panel">
+                <h2>Configuration Panel</h2>
+                <form id="config-form">
+                    <label for="repo-name">Repository Name:</label>
+                    <input type="text" id="repo-name" required>
+
+                    <label for="css-framework">Choose CSS Framework:</label>
+                    <select id="css-framework">
+                        <option value="none">None</option>
+                        <option value="bootstrap">Bootstrap</option>
+                        <option value="tailwind">Tailwind CSS</option>
+                        <option value="bulma">Bulma</option>
+                    </select>
+
+                    <label for="linting-rules">Linting Rules:</label>
+                    <input type="text" id="linting-rules" placeholder="e.g., airbnb">
+
+                    <button type="submit">Generate Repository</button>
+                </form>
+            </section>
+            <section id="terminal-section">
+                <h2>Terminal Emulator</h2>
+                <div id="terminal"></div>
+                <button id="npm-install">Run npm install</button>
+                <button id="npm-build">Run build</button>
+            </section>
+            <section id="download-section">
+                <h2>Download Options</h2>
+                <button id="download-repo">Download as Zip</button>
+                <button id="push-to-github">Push to GitHub</button>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2023 App Builder.
+                All rights reserved.
+            </p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/4.4.0/xterm.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
